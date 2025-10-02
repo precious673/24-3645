@@ -3,19 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <title>Starlight Travel Blog</title>
+    <link rel="stylesheet" href="css/style.css">
   <style>
-    body {
+    h1 {
+      color: red;
+      text-align: center;
       font-family: Arial, sans-serif;
+    }
+    .highlight {
+      font-weight: bold;
+      background:yellow;
+      font-size: 20px;
+    }
+    .box {
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid black;
+    }
+  @media (max-width: 600px) {
+    body{font-size: 14px;}
+      background: lightblue;
+    }
+  
+  .banner  {
+    background-image: url('https://picsum.photos/1200/300');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+  }
+    button {
+      background: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background: green;
+    }
+    .relative-box {
+      position: relative;
+      background: lightgray;
+      width: 200px;
+      height: 100px;
+      margin-bottom: 20px 0;
+    }
+    .absolute-box {
+      position: absolute;
+      top: 1000px;
+      left: 50px;
+      background: orange;
+      width: 200px;
+      height: 100px;
+    }
+    .px-text {
+      font-size: 16px;
+    }
+    .em-text {
+      font-size: 1.5em;
+    }
+    .rem-text {
+      font-size: 1.5rem;
+    }
+    .flex-layout {
+      display: flex;
+      gap: 20px;
+    }
+    .flex-layout div {
+      flex: 1;
+      padding: 20px;
+      background: #eee;
+    }
+    .rgb-text {
+      color: rgb(255 ,0 ,0);
+    }
+    .hex-text {
+      color: #00ff00;
+    }
+    .hsl-text {
+      color: hsl(240, 100%, 50%);
+    }
+    body {
       margin: 0;
       padding: 0;
       background: #f8f8f8;
-      color: #333;
-    }
-    header {
-      background: #004080;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      color: purple;
+      font-family: Arial, sans-serif;
     }
     nav a {
       color: white;
@@ -26,15 +100,11 @@
     nav a:hover {
       text-decoration: underline;
     }
-    main {
-      max-width: 1000px;
-      margin: auto;
+    header {
+      background: #004080;
+      color: white;
       padding: 20px;
-    }
-    h2 {
-      color: #004080;
-      border-bottom: 2px solid #004080;
-      padding-bottom: 5px;
+      text-align: center;
     }
     .service-list {
       display: flex;
@@ -76,7 +146,7 @@
       text-align: center;
       padding: 15px;
       margin-top: 40px;
-    }
+    } 
   </style>
 </head>
 <body>
@@ -96,10 +166,10 @@
   <main>
     <!-- Intro -->
     <section>
-      <h2>Welcome!</h2>
-      <p>
+      <h2 class="highlight">Welcome!</h2>
+      <p style='color:red;'>
         Hi, I’m Starlight! 🌍 This is my personal travel blog where I share exciting adventures, travel tips, 
-        and destination guides from around the world. From tropical beaches to bustling cities, I love exploring 
+        and destination guides from around the world.<p style='color: #00ff00;'> From tropical beaches to bustling cities, I love exploring 
         new places and inspiring others to travel too. My goal is to help you plan affordable, fun, and memorable 
         trips no matter your budget.
       </p>
@@ -165,17 +235,36 @@
     <section>
       <h2>Travel Vlog</h2>
       <iframe width="400" height="200" src="https://www.youtube.com/embed/Eef9dxU3Gg8" title="The Ultimate Guide to Filming Yourself for Travel Vlogs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <p>
-        Watch this vlog for highlights from my latest trip! You’ll see breathtaking views, local food, 
-        and fun travel tips.
+           </div>
+      <div>
+      <p class="px-text">
+        Watch this vlog for highlights from my latest trip!<p class="em-text"> You’ll see breathtaking views, local food, 
+       <p class="rem-text"> and fun travel tips.
       </p>
+      </div>
+  </section>
+  <section>
+    <div class="relative-box">Relative Box</div>
+    <div class="absolute-box">Absolute Box</div>
+  </section>
+  <section>
+    <p>Responsive design</p>
     </section>
-  </main>
-
-  <!-- Footer -->
+    <section>
+      <div class="banner"></div>
+      </section>
+      <section>
+        <button>hover me</button>
+        </section>
+  <section>
+    <div class="box">Box model</div>
+    </section>
+</main>
   <footer>
     <p>Contact: starlighttravels@email.com</p>
     <p>&copy; 2025 Starlight Travel Blog</p>
   </footer>
 </body>
 </html>
+
+
