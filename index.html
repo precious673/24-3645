@@ -20,10 +20,18 @@
       padding: 10px;
       border: 2px solid black;
     }
-  @media (max-width: 600px) {
-    body{font-size: 14px;}
-      background: lightblue;
+    .responsive {
+      background-color: lightgray;
+      padding: 20px;
+      margin: 20px 0;
+      border: 2px solid black;
+      text-align: center;
     }
+@media (max-width: 600px) {
+  .responsive {
+    background-color: lightblue;
+  }
+
   
   .banner  {
     background-image: url('https://picsum.photos/1200/300');
@@ -31,17 +39,9 @@
     background-size: cover;
     height: 200px;
   }
-    button {
-      background: blue;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background: green;
-    }
+}
+
+    
     .relative-box {
       position: relative;
       background: lightgray;
@@ -51,12 +51,28 @@
     }
     .absolute-box {
       position: absolute;
-      top: 1000px;
+      top: 1000px;   
       left: 50px;
       background: orange;
       width: 200px;
       height: 100px;
     }
+.hover-btn {
+  background-color: green; 
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.4s, transform 0.3s;
+}
+.hover-btn:hover {
+  background-color: #00b4d8; 
+  color: #003049;             
+  transform: scale(1.1);
+}
     .px-text {
       font-size: 16px;
     }
@@ -227,7 +243,7 @@
     </section>
     <section class="flex-layout">
       <div>
-      <h2>Travel Vlog</h2>
+      <h2 class>"box">Travel Vlog</h2>
       <iframe width="400" height="200" src="https://www.youtube.com/embed/Eef9dxU3Gg8" title="The Ultimate Guide to Filming Yourself for Travel Vlogs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
            </div>
       <div>
@@ -242,17 +258,14 @@
     <div class="absolute-box">Absolute Box</div>
   </section>
   <section>
-    <p>Responsive design</p>
+    <div class="responsive">Responsive design</div>
     </section>
+      <section>
+        <button class="hover-btn"Hover me!></button>
+      </section>
     <section>
       <div class="banner"></div>
       </section>
-      <section>
-        <button>hover me</button>
-        </section>
-  <section>
-    <div class="box">Box model</div>
-    </section>
 </main>
   <footer>
     <p>Contact: starlighttravels@email.com</p>
@@ -260,6 +273,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
